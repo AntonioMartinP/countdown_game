@@ -15,7 +15,7 @@ const Timer = ({title, time}) =>{
     const handleStartTime = () => {
         setHasStart(true);
         timer.current = setTimeout(()=>{
-            dialogModal.current.showModal();
+            dialogModal.current.open();
             setHasStart(false);
             setHasLooser(true);
         }, time * 1000)
