@@ -1,4 +1,5 @@
 import { forwardRef, useImperativeHandle, useRef } from "react";
+import {createPortal}  from "react-dom";
 
 const ModalDialog = forwardRef(function ModalDialog({timeRemaining, onResetTimeRemaining, timeTarget}, ref){
   const dialog= useRef();  
@@ -21,7 +22,7 @@ const ModalDialog = forwardRef(function ModalDialog({timeRemaining, onResetTimeR
       } 
     });
 
-    return (
+    return createPortal (
       <>
         <dialog
           ref={dialog}
@@ -44,7 +45,8 @@ const ModalDialog = forwardRef(function ModalDialog({timeRemaining, onResetTimeR
             </button>
           </form>
         </dialog>
-      </>
+      </>,
+      document.getElementById('modal')
     );
 })
 
