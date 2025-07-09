@@ -7,14 +7,14 @@ function App() {
   return (
     <>
       <Player />
-      <TimerContainer />
-      <Timer title="Nivel facil" time="1"></Timer>
-      <Timer title="Nivel intermedio" time="5"></Timer>
-      <Timer title="Nivel dificil" time="40"></Timer>
-      <Timer title="Nivel reto" time="60"></Timer>
-      
+      <TimerContainer>
+        <Timer title="Nivel facil" time="1"></Timer>
+        <Timer title="Nivel intermedio" time="5"></Timer>
+        <Timer title="Nivel dificil" time="40"></Timer>
+        <Timer title="Nivel reto" time="60"></Timer>
+      </TimerContainer>
     </>
-  )
+ )
 }
 
 export default App;
